@@ -1,11 +1,12 @@
 package main
 
 import (
-	"fmt"
+	"net/http"
 
-	"github.com/pluralsight/webservice/models"
+	"github.com/pluralsight/webservice/controllers"
 )
 
 func main() {
-	
+	controllers.RegisterController()
+	http.ListenAndServe(":3000", nil)
 }
